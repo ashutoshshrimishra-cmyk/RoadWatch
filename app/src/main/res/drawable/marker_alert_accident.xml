@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="48dp"
+    android:viewportWidth="40"
+    android:viewportHeight="48">
+    <!-- Pin shape (white outline + dark fill so triangle pops) -->
+    <path
+        android:fillColor="#1E232A"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M20,2 C10.6,2 3,9.6 3,19 C3,30 20,46 20,46 C20,46 37,30 37,19 C37,9.6 29.4,2 20,2 Z" />
+    <!-- Warning triangle inside pin -->
+    <path
+        android:fillColor="#FC5C65"
+        android:pathData="M11,24 L29,24 L20,9 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19.2,18 h1.6 v3 h-1.6 z M19.2,21.5 h1.6 v1 h-1.6 z" />
+</vector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Brand-only colors that must stay constant in both light and dark mode
+    (e.g., adaptive icon background, splash screen background). Anything that
+    should swap with theme lives in colors.xml / values-night/colors.xml instead.
+-->
+<resources>
+    <color name="ic_launcher_background">#12151A</color>
+    <color name="splash_background">#12151A</color>
+</resources>

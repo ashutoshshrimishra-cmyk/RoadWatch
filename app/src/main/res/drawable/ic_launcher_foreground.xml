@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Adaptive icon foreground. Adaptive icons are 108×108dp; the inner 72×72dp
+    is the safe zone (anything outside may be cropped by OEM mask shapes).
+    All visual content sits inside that center area.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Mint-green road circle — the brand mark -->
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M54,30 m-22,0 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0" />
+
+    <!-- Stylised 'R' for RoadWatch carved out of the circle -->
+    <path
+        android:fillColor="#12151A"
+        android:pathData="M44,18 L44,42 L48,42 L48,33 L52,33 L57,42 L62,42 L57,32.5 C60,31.5 62,29 62,26 C62,22 59,19.5 55,18.5 L44,18 Z M48,22 L54,22 C56,22 58,23 58,25.5 C58,28 56,29.5 54,29.5 L48,29.5 Z" />
+
+    <!-- Road dashes radiating below the circle, suggesting a highway -->
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M40,72 L46,72 L46,76 L40,76 Z" />
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M50,72 L58,72 L58,76 L50,76 Z" />
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M62,72 L68,72 L68,76 L62,76 Z" />
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M44,80 L52,80 L52,84 L44,84 Z" />
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M56,80 L64,80 L64,84 L56,84 Z" />
+</vector>

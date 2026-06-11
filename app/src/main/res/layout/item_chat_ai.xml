@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:paddingVertical="6dp">
+
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/btn_send_circle"
+        android:gravity="center"
+        android:text="AI"
+        android:textColor="@color/bg_dark_slate"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:lineSpacingExtra="2dp"
+        android:background="@drawable/bubble_ai"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/text_light" />
+
+</LinearLayout>
+
+

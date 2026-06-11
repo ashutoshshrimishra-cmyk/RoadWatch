@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- Road background -->
+    <path
+        android:fillColor="#4A5568"
+        android:pathData="M20,30 L100,30 L100,90 L20,90 Z"/>
+    
+    <!-- Road center line (dashed) -->
+    <path
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M60,30 L60,90"/>
+    
+    <!-- Road edges -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M20,30 L100,30 M20,90 L100,90"/>
+    
+    <!-- Car icon -->
+    <path
+        android:fillColor="#3DDC84"
+        android:pathData="M50,50 L70,50 L72,55 L48,55 Z M48,55 L48,65 L50,67 L52,67 L52,65 L68,65 L68,67 L70,67 L72,65 L72,55 Z M51,58 C51,59.1 50.1,60 49,60 C47.9,60 47,59.1 47,58 C47,56.9 47.9,56 49,56 C50.1,56 51,56.9 51,58 Z M73,58 C73,59.1 72.1,60 71,60 C69.9,60 69,59.1 69,58 C69,56.9 69.9,56 71,56 C72.1,56 73,56.9 73,58 Z"/>
+    
+    <!-- Traffic cone -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M85,70 L90,85 L80,85 Z M82,72 L88,72 L87,75 L83,75 Z"/>
+    
+    <!-- Warning sign -->
+    <path
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:fillColor="#1E2530"
+        android:pathData="M30,70 L35,60 L40,70 Z M35,63 L35,67 M35,68 L35,69"/>
+</vector>

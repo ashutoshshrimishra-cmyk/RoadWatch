@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_mark_all_read"
+        android:title="Mark all read"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_clear_inbox"
+        android:title="Clear all"
+        app:showAsAction="never" />
+</menu>

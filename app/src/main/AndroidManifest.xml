@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Android 13+ requires explicit runtime opt-in for posting notifications -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    
+    <!-- ADDED: osmdroid permissions for offline map caching -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="32" />
+    <!-- Android 13+ media permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <application
+        android:name=".RoadWatchApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RoadWatch"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!-- REMOVED: Google Maps API Key (no longer needed with osmdroid)
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${mapsApiKey}" />
+        -->
+
+        <!-- Splash is the launcher activity. It routes to LoginActivity or
+             MainActivity based on session state. -->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.RoadWatch.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.SignupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.dashboard.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.complaint.ComplaintFormActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.complaint.ComplaintActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.complaint.SubmissionSuccessActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.chat.ChatbotActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.reports.ReportMapActivityOSM"
+            android:exported="false" />
+
+        <!-- DEPRECATED: Old Google Maps activity (replaced with OSM)
+        <activity
+            android:name=".ui.reports.ReportMapActivity"
+            android:exported="false" />
+        -->
+
+        <activity
+            android:name=".ui.complaints.ComplaintListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.complaints.ComplaintDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.reports.RoadFinancialStatusActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.notifications.NotificationInboxActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.alerts.RoadAlertsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.roads.RoadListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.roads.RoadDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.authorities.AuthorityListActivity"
+            android:exported="false" />
+
+        <!-- Step 8: FCM messaging service. Receives push payloads from Firebase
+             and turns them into system notifications + inbox entries. -->
+        <service
+            android:name=".notifications.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+    </application>
+
+</manifest>

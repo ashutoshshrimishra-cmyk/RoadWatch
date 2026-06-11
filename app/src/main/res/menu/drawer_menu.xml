@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Main Navigation Section -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        
+        <item
+            android:id="@+id/nav_my_complaints"
+            android:icon="@drawable/ic_assignment"
+            android:title="My Complaints" />
+        
+        <item
+            android:id="@+id/nav_road_budget"
+            android:icon="@drawable/ic_account_balance"
+            android:title="Road Budget" />
+
+        <item
+            android:id="@+id/nav_road_intelligence"
+            android:icon="@drawable/ic_road_animation"
+            android:title="Road Intelligence" />
+
+        
+        
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map"
+            android:title="Map View" />
+        
+        <item
+            android:id="@+id/nav_road_alerts"
+            android:icon="@drawable/ic_alert_accident"
+            android:title="Live Alerts" />
+        
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_camera"
+            android:title="Report Issue" />
+        
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_chat"
+            android:title="AI Assistant" />
+    </group>
+    
+    <!-- Account & Settings Section -->
+    <group android:id="@+id/group_account">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="Profile" />
+        
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+        
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app"
+            android:title="Logout" />
+    </group>
+    
+</menu>

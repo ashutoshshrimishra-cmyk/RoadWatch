@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">रोड वॉच AI</string>
+
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="section_appearance">रूप</string>
+    <string name="section_language">भाषा</string>
+    <string name="section_about">जानकारी और सहायता</string>
+    <string name="section_account">खाता</string>
+
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="dark_mode_desc">हल्के और गहरे थीम के बीच स्विच करें</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिंदी</string>
+    <string name="language_desc">अपनी पसंदीदा भाषा चुनें</string>
+
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="contact_developer">डेवलपर से संपर्क करें</string>
+    <string name="about_roadwatch">रोडवॉच के बारे में</string>
+    <string name="logout">लॉग आउट</string>
+
+    <string name="profile_title">प्रोफ़ाइल</string>
+    <string name="profile_name">नाम</string>
+    <string name="profile_email">ईमेल</string>
+    <string name="profile_phone">फ़ोन</string>
+    <string name="edit_profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="save_profile">परिवर्तन सहेजें</string>
+    <string name="delete_account">खाता हटाएँ</string>
+    <string name="delete_account_warning">यह आपके खाते और सभी संबंधित रिपोर्ट को स्थायी रूप से हटा देगा। इस क्रिया को पूर्ववत नहीं किया जा सकता।</string>
+
+    <string name="cancel">रद्द करें</string>
+    <string name="confirm">पुष्टि करें</string>
+    <string name="ok">ठीक है</string>
+    <string name="logout_confirm_title">लॉग आउट करें?</string>
+    <string name="logout_confirm_message">रिपोर्टिंग जारी रखने के लिए आपको फिर से साइन इन करना होगा।</string>
+
+    <string name="about_body">रोडवॉच एक नागरिक-संचालित सड़क दोष रिपोर्टिंग प्लेटफ़ॉर्म है। गड्ढों की तस्वीर लें, मरम्मत को ट्रैक करें, और अपने स्थानीय सड़क बुनियादी ढाँचे के बजट के बारे में सूचित रहें।\n\nसंस्करण 1.0</string>
+    <string name="privacy_body">रोडवॉच केवल सड़क दोषों की रिपोर्ट और ट्रैक करने के लिए आवश्यक डेटा एकत्र करता है: आपके द्वारा कैप्चर की गई तस्वीरें, रिपोर्ट के समय जीपीएस निर्देशांक, और खाता ईमेल। तस्वीरें हमारे सुरक्षित बैकएंड पर अपलोड की जाती हैं और संबंधित लोक निर्माण विभाग के साथ साझा की जाती हैं। आपके स्थान को पृष्ठभूमि में कभी भी ट्रैक नहीं किया जाता।</string>
+    <string name="contact_email">support@roadwatch.app</string>
+
+    <string name="splash_tagline">AI द्वारा संचालित</string>
+    <string name="splash_subtitle">नागरिक-संचालित सड़क बुनियादी ढाँचा</string>
+</resources>

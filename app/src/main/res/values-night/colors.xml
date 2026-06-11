@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    DARK mode palette. Same names as values/colors.xml so layouts swap shades
+    automatically when AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
+    is active.
+-->
+<resources>
+    <!-- Brand accents stay constant -->
+    <color name="mint_green">#25C19A</color>
+    <color name="coral_red">#FC5C65</color>
+
+    <!-- Surfaces: dark slate -->
+    <color name="bg_dark_slate">#12151A</color>
+    <color name="card_surface">#1E232A</color>
+    <color name="card_bg">#1E232A</color>
+    <color name="ai_bubble_bg">#1E232A</color>
+    <color name="user_bubble_bg">#25C19A</color>
+
+    <!-- Text: light on dark surfaces -->
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_muted">#888888</color>
+    <color name="text_secondary">#A0A0A0</color>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RoadWatch AI</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">Settings</string>
+    <string name="section_appearance">Appearance</string>
+    <string name="section_language">Language</string>
+    <string name="section_about">About &amp; Support</string>
+    <string name="section_account">Account</string>
+
+    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode_desc">Switch between light and dark themes</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिंदी (Hindi)</string>
+    <string name="language_desc">Choose your preferred language</string>
+
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="contact_developer">Contact Developer</string>
+    <string name="about_roadwatch">About RoadWatch</string>
+    <string name="logout">Logout</string>
+
+    <!-- Profile screen -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_phone">Phone</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save_profile">Save Changes</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="delete_account_warning">This permanently removes your account and all associated reports. This action cannot be undone.</string>
+
+    <!-- Common -->
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="ok">OK</string>
+    <string name="logout_confirm_title">Logout?</string>
+    <string name="logout_confirm_message">You will need to sign in again to continue reporting issues.</string>
+
+    <!-- About content -->
+    <string name="about_body">RoadWatch is a citizen-powered road defect reporting platform. Capture potholes, track repairs, and stay informed about your local road infrastructure budget.\n\nVersion 1.0</string>
+    <string name="privacy_body">RoadWatch collects only the data needed to report and track road defects: your captured photos, GPS coordinates at time of report, and account email. Photos are uploaded to our secure backend and shared with the relevant public works department. Your location is never tracked in the background.</string>
+    <string name="contact_email">support@roadwatch.app</string>
+
+    <!-- Splash screen -->
+    <string name="splash_tagline">Powered by AI</string>
+    <string name="splash_subtitle">Citizen-driven road infrastructure</string>
+
+    <string name="password_hint">Enter password</string>
+    <string name="not_available">N/A</string>
+
+    <!-- Complaint detail section headers (emoji via Unicode escape to avoid XML encoding issues) -->
+    <string name="ai_analysis_label">&#x1F916; AI Analysis</string>
+    <string name="dept_response_label">&#x1F3DB;&#xFE0F; Department Response</string>
+    <string name="admin_notes_label">&#x1F4CB; Admin Notes</string>
+</resources>

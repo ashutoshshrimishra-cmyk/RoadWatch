@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="48dp"
+    android:viewportWidth="40"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#1E232A"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M20,2 C10.6,2 3,9.6 3,19 C3,30 20,46 20,46 C20,46 37,30 37,19 C37,9.6 29.4,2 20,2 Z" />
+    <!-- Traffic light body -->
+    <path
+        android:fillColor="#374151"
+        android:pathData="M16,8 h8 v18 h-8 z" />
+    <!-- Three lights -->
+    <path
+        android:fillColor="#FC5C65"
+        android:pathData="M20,11 a1.5,1.5 0 1,0 0.001,0z" />
+    <path
+        android:fillColor="#F4B400"
+        android:pathData="M20,16 a1.5,1.5 0 1,0 0.001,0z" />
+    <path
+        android:fillColor="#25C19A"
+        android:pathData="M20,21 a1.5,1.5 0 1,0 0.001,0z" />
+</vector>

@@ -1,0 +1,129 @@
+package com.roadwatch.mobile.network;
+
+import com.roadwatch.mobile.network.dto.AiChatRequest;
+import com.roadwatch.mobile.network.dto.AiChatResponse;
+import com.roadwatch.mobile.network.dto.AuthorityDto;
+import com.roadwatch.mobile.network.dto.BudgetDto;
+import com.roadwatch.mobile.network.dto.ComplaintDto;
+import com.roadwatch.mobile.network.dto.LoginRequest;
+import com.roadwatch.mobile.network.dto.LoginResponse;
+import com.roadwatch.mobile.network.dto.PagedComplaintsDto;
+import com.roadwatch.mobile.network.dto.PagedNotificationsDto;
+import com.roadwatch.mobile.network.dto.RoadAlertCreateRequest;
+import com.roadwatch.mobile.network.dto.RoadAlertDto;
+import com.roadwatch.mobile.network.dto.RoadDto;
+
+import java.util.List;
+
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+
+/**
+ * Retrofit interface against the production backend at /api/**.
+ * Endpoint contract intentionally kept identical to what the deployed
+ * backend (https://github.com/25f3001314-dev/Roadwatch) exposes.
+ */
+public interface ApiService {
+
+    // ”€”€ Auth (citizen) ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @POST("citizen/login")
+    Call<LoginResponse> citizenLogin(@Body com.roadwatch.mobile.network.dto.CitizenAuthRequest request);
+
+    @POST("citizen/register")
+    Call<LoginResponse> citizenRegister(@Body java.util.Map<String, String> body);
+
+    @POST("citizen/fcm-token")
+    Call<ResponseBody> registerCitizenFcmToken(@Body java.util.Map<String, String> body);
+
+    // ”€”€ Auth (admin €” kept for backwards compat) ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @POST("auth/login")
+    Call<LoginResponse> login(@Body LoginRequest request);
+
+    // ”€”€ Complaints ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @GET("complaints")
+    Call<PagedComplaintsDto> getComplaints(
+            @Query("page") int page,
+            @Query("size") int size
+    );
+
+    @GET("complaints/{id}")
+    Call<ComplaintDto> getComplaintById(@Path("id") long id);
+
+    @Multipart
+    @POST("complaints")
+    Call<ResponseBody> createComplaint(
+            @Part("roadType") RequestBody roadType,
+            @Part("location") RequestBody location,
+            @Part("latitude") RequestBody latitude,
+            @Part("longitude") RequestBody longitude,
+            @Part("description") RequestBody description,
+            @Part MultipartBody.Part image
+    );
+
+    // ”€”€ Budgets ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @GET("budgets")
+    Call<List<BudgetDto>> getBudgets();
+
+    // ”€”€ Citizen: My Complaints + Notifications ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @GET("citizen/me/complaints")
+    Call<PagedComplaintsDto> getMyComplaints(
+            @Query("page") int page,
+            @Query("size") int size
+    );
+
+    @GET("citizen/me/complaints/{id}/timeline")
+    Call<List<java.util.Map<String, Object>>> getComplaintTimeline(@Path("id") long id);
+
+    @GET("citizen/me/notifications")
+    Call<PagedNotificationsDto> getMyNotifications(
+            @Query("page") int page,
+            @Query("size") int size
+    );
+
+    @GET("citizen/me/notifications/unread-count")
+    Call<java.util.Map<String, Object>> getUnreadNotificationCount();
+
+    @POST("citizen/me/notifications/mark-read")
+    Call<ResponseBody> markNotificationsRead();
+
+    @POST("citizen/me/complaints/{id}/feedback")
+    Call<ResponseBody> submitFeedback(@Path("id") long id, @Body java.util.Map<String, Object> body);
+
+    // ”€”€ Roads (Road Intelligence) ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @GET("roads")
+    Call<List<RoadDto>> getRoads();
+
+    @GET("roads/{id}")
+    Call<RoadDto> getRoadById(@Path("id") long id);
+
+    // ”€”€ Authorities (Directory) ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @GET("authorities")
+    Call<List<AuthorityDto>> getAuthorities();
+
+    // ”€”€ AI chat (kept for parity with current UI) ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @POST("ai/chat")
+    Call<AiChatResponse> aiChat(@Body AiChatRequest request);
+
+    // ”€”€ Road alerts (used by alerts UI) ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
+    @GET("alerts")
+    Call<List<RoadAlertDto>> getAlerts(
+            @Query("lat") Double lat,
+            @Query("lng") Double lng,
+            @Query("radiusKm") Double radiusKm
+    );
+
+    @POST("alerts")
+    Call<RoadAlertDto> createAlert(@Body RoadAlertCreateRequest request);
+
+    @POST("alerts/{id}/upvote")
+    Call<RoadAlertDto> upvoteAlert(@Path("id") long id);
+}

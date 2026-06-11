@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LIGHT mode palette. Names are kept identical to dark mode so all existing
+    layouts (which reference @color/bg_dark_slate, @color/card_surface, etc.)
+    automatically pick the right shade for the active theme.
+
+    Values intentionally chosen to keep the mint/coral accent identity but
+    flip surfaces to light backgrounds with dark text.
+-->
+<resources>
+    <!-- Brand accents stay constant across modes -->
+    <color name="mint_green">#25C19A</color>
+    <color name="coral_red">#FC5C65</color>
+
+    <!-- Surfaces: light in light mode -->
+    <color name="bg_dark_slate">#F5F7FA</color>
+    <color name="card_surface">#F8FAFB</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="ai_bubble_bg">#ECEFF4</color>
+    <color name="user_bubble_bg">#25C19A</color>
+
+    <!-- Text: dark on light surfaces -->
+    <color name="text_light">#12151A</color>
+    <color name="text_primary">#12151A</color>
+    <color name="text_muted">#6B7280</color>
+    <color name="text_secondary">#9CA3AF</color>
+</resources>
+
+

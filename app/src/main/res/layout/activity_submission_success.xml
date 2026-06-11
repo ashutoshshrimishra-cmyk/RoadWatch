@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark_slate">
+
+    <include layout="@layout/toolbar_standard" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <!-- Success Checkmark Icon -->
+            <ImageView
+                android:id="@+id/checkmarkIcon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_checkmark_success"
+                android:contentDescription="Success"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Success Title -->
+            <TextView
+                android:id="@+id/successTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complaint Registered!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/mint_green"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Success Message -->
+            <TextView
+                android:id="@+id/successMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our AI is now analyzing the road defect. You'll be notified once verification is complete."
+                android:textSize="16sp"
+                android:textColor="@color/text_light"
+                android:textAlignment="center"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- View Report Button -->
+            <Button
+                android:id="@+id/viewReportButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="View My Report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/bg_dark_slate"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="16dp"
+                android:elevation="4dp" />
+
+            <!-- Back to Home Button -->
+            <Button
+                android:id="@+id/backHomeButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Back to Home"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/mint_green"
+                android:background="@drawable/button_outline"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
